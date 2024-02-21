@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'tss-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLinkWithHref],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
