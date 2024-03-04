@@ -1,30 +1,32 @@
-<table class="table table-striped table-bordered table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Job Number</th>
-        <th scope="col">Date Created</th>
-        <th scope="col">Description</th>
-        <th scope="col">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>05/02/2024</td>
-        <td>Test Job 1</td>
-        <td>Todo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>20/04/2021</td>
-        <td>Test Job 2</td>
-        <td>In-Progress</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>10/01/2020</td>
-        <td>Test Job 3</td>
-        <td>Complete</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-sm btn-primary" style="width: 100px; margin-right: 0.5em;">NEW</button>
+    <button class="btn btn-sm btn-primary" style="width: 100px;">EDIT</button>
+  </div>
+  <div class="col" style="text-align: right;">
+    <button class="btn btn-sm btn-danger" style="width: 100px;">DELETE</button>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col">
+    <table class="table table-striped table-bordered table-hover table-sm">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date Created</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of mockData; let i = index">
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.dateCreated }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
