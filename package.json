@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-prod": "ng build --configuration production",
-    "build-container": "docker build -t community-hub .",
-    "start-container": "docker run -d -p 4200:80 community-hub"
+    "start-container": "docker-compose up",
+    "stop-container": "docker-compose down"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +38,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nodemon": "^3.1.0",
+    "npx": "^10.2.2",
     "typescript": "~5.3.2"
   }
 }
