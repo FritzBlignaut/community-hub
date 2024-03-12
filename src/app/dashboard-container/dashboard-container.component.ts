@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterLinkWithHref, RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive, RouterLinkWithHref, RouterOutlet } from '@angular/router';
 import { PageHeaderComponent } from '../shared/page-header/page-header.component';
 
 @Component({
@@ -9,6 +9,11 @@ import { PageHeaderComponent } from '../shared/page-header/page-header.component
   templateUrl: './dashboard-container.component.html',
   styleUrl: './dashboard-container.component.scss'
 })
-export class DashboardContainerComponent {
+export class DashboardContainerComponent implements OnInit {
 
+  constructor(private route: Router) {}
+
+  ngOnInit(): void {
+    this.route.navigate(['dashboard/dashboard-overview']);
+  }
 }
